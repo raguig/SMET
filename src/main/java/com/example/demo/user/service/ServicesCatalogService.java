@@ -139,6 +139,7 @@ public class ServicesCatalogService {
         catalog.put("touristinfo", touristInfoService);
         catalog.put("information-touristique", touristInfoService);
 
+
         // Payment Service
         ServiceCatalogDTO paymentService = ServiceCatalogDTO.builder()
                 .name("Payments")
