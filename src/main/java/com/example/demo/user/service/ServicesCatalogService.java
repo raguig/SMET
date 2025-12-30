@@ -139,6 +139,29 @@ public class ServicesCatalogService {
         catalog.put("touristinfo", touristInfoService);
         catalog.put("information-touristique", touristInfoService);
 
+        // Payment Service
+        ServiceCatalogDTO paymentService = ServiceCatalogDTO.builder()
+                .name("Payments")
+                .description("Create and retrieve payment transactions")
+                .baseUrl("/api/payments")
+                .endpoints(Arrays.asList(
+                        ServiceCatalogDTO.EndpointInfo.builder()
+                                .path("/api/payments")
+                                .method("POST")
+                                .description("Create a new payment")
+                                .requiresAuth(true)
+                                .build(),
+                        ServiceCatalogDTO.EndpointInfo.builder()
+                                .path("/api/payments/{id}")
+                                .method("GET")
+                                .description("Get payment details by ID")
+                                .requiresAuth(true)
+                                .build()
+                ))
+                .build();
+        catalog.put("payments", paymentService);
+        catalog.put("payment", paymentService);
+
         return catalog;
     }
 }
