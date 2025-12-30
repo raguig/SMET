@@ -23,3 +23,6 @@ spring:
 jwt:
   secret: mySecretKeyForJwtTokenGenerationAndValidationWithMinimum32Characters
   expiration: 86400000
+
+payment:
+  provider: KAFKA
