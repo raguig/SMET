@@ -3,22 +3,23 @@ package com.example.demo.user.dto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 public class UserDTO {
 
-	@Data
-	@AllArgsConstructor
-	@Builder
-	public static class PostInput {
-
-		private String email;
-		private String fullName;
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class PostInput {
+        private String email;
+        private String fullName;
+        private String password;  // ← ADD THIS
         private Boolean hidden;
-
-
     }
-	
-	@Data
+    
+    @Data
+    @NoArgsConstructor
     @AllArgsConstructor
     @Builder
     public static class PostOutput {
@@ -26,5 +27,4 @@ public class UserDTO {
         private String email;
         private String fullName;
     }
-
 }
